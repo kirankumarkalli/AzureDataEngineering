@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntimeSQLServer",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "integration to link sql server on local machine"
+	}
+}
