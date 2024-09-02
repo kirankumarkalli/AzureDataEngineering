@@ -1,0 +1,9 @@
+{
+	"name": "AzureDataFactoryPracticeKiran",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "827635c7-b99a-4bf9-b26c-5a25960fb48a",
+		"tenantId": "bc0b3954-4334-4a45-aec0-2165dd20b765"
+	}
+}
