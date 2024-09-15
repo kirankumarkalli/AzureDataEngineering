@@ -66,9 +66,9 @@
 				]
 			},
 			{
-				"name": "DataTransfomation",
-				"description": "DataTransfomation",
-				"type": "DatabricksSparkPython",
+				"name": "DataPipelineProcessingTest",
+				"description": "DataPipelineProcessingTest",
+				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
 						"activity": "MSSQL2ADLS",
@@ -85,8 +85,11 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Date_pipeline_test"
+				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricksTest",
+					"referenceName": "AzureDatabricksTestPipeline",
 					"type": "LinkedServiceReference"
 				}
 			}
