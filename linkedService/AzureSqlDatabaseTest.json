@@ -1,0 +1,15 @@
+{
+	"name": "AzureSqlDatabaseTest",
+	"properties": {
+		"description": "AzureSqlDatabaseTest",
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "kirandatapipeline.database.windows.net",
+			"database": "kirandataengineeringpractice",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}
