@@ -73,7 +73,7 @@
 					{
 						"activity": "MSSQL2ADLS",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
