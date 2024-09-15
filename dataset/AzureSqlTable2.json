@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "kirandataengineeringpractice",
+			"table": "employee_checkin_details"
+		}
+	}
+}

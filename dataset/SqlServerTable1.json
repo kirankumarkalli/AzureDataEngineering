@@ -1,0 +1,8 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
