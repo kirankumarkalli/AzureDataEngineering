@@ -1,0 +1,32 @@
+{
+	"name": "AzureSqlTableTest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseTest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "employeeid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "entry_details",
+				"type": "varchar"
+			},
+			{
+				"name": "timestamp_details",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee_checkin_details"
+		}
+	}
+}
