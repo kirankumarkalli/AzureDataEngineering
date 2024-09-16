@@ -69,14 +69,7 @@
 				"name": "DataPipelineProcessingTest",
 				"description": "DataPipelineProcessingTest",
 				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "MSSQL2ADLS",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -86,7 +79,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Date_pipeline_test"
+					"notebookPath": "/Users/kirankumarkalli1102@outlook.com/AzureDataEngineering/Data_pipeline_test_ADF"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricksTestPipeline",
