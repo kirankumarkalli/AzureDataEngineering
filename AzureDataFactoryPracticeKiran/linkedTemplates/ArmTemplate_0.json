@@ -78,6 +78,32 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureDatabricksTestPipeline')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "AzureDatabricksTestPipeline",
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-1517387619242088.8.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDatabricksTestPipeline_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_DS3_v2",
+					"newClusterNumOfWorker": "1",
+					"newClusterSparkEnvVars": {
+						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+					},
+					"newClusterVersion": "11.3.x-scala2.12",
+					"clusterOption": "Fixed",
+					"newClusterInitScripts": []
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseTest')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -103,32 +129,6 @@
 				"type": "SelfHosted",
 				"description": "integration to link sql server on local machine",
 				"typeProperties": {}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDatabricksTestPipeline')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "AzureDatabricksTestPipeline",
-				"annotations": [],
-				"type": "AzureDatabricks",
-				"typeProperties": {
-					"domain": "https://adb-1517387619242088.8.azuredatabricks.net",
-					"accessToken": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDatabricksTestPipeline_accessToken')]"
-					},
-					"newClusterNodeType": "Standard_DS3_v2",
-					"newClusterNumOfWorker": "1",
-					"newClusterSparkEnvVars": {
-						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
-					},
-					"newClusterVersion": "11.3.x-scala2.12",
-					"clusterOption": "Fixed",
-					"newClusterInitScripts": []
-				}
 			},
 			"dependsOn": []
 		},
@@ -272,14 +272,7 @@
 						"name": "DataPipelineProcessingTest",
 						"description": "DataPipelineProcessingTest",
 						"type": "DatabricksNotebook",
-						"dependsOn": [
-							{
-								"activity": "MSSQL2ADLS",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -289,7 +282,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Date_pipeline_test"
+							"notebookPath": "/Users/kirankumarkalli1102@outlook.com/AzureDataEngineering/Data_pipeline_test_ADF"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricksTestPipeline",
